@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+<script type="text/Javascript">
+    function averageOfNumbers(start, end) {
+
+    let sum = 0;
+    for (let i = start; i <= end; i++) {
+        sum += i;
+    }
+ 
+    const average = sum / (end - start + 1);
+    return average;
+}
+const start = 1;
+const end = 10;
+const average = averageOfNumbers(start, end);
+console.log(The average of numbers from ${start} to ${end} is ${average});
+
+function factorial(num) {
+    if (num === 0 || num === 1) {
+        return 1;
+    }
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+function combination(X, Y) {
+    if (Y > X) {
+        [X, Y] = [Y, X]; 
+    }
+    
+    const numerator = factorial(X);
+    const denominator = factorial(Y) * factorial(X - Y);
+    
+    return numerator / denominator;
+}
+
+const X = 1; 
+const Y = 2;
+const result = combination(X, Y);
+console.log(C(${X}, ${Y}) = ${result});
+
+
+</script>
+</body>
+</html>
